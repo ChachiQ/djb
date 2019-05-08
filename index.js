@@ -23,7 +23,7 @@ var deviceInfo = devices.find(function(d) {
 });
 
 if (!deviceInfo) {
-    console.log(`can't find flydigi devices`)
+    console.log(`can't find flydigi devices.`)
     process.exit(0);
 }
 
