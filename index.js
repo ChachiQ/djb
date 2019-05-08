@@ -34,7 +34,9 @@ var hid = new HID.HID(deviceInfo.vendorId, deviceInfo.productId);
 console.log(hid.getDeviceInfo())
 
 hid.gotData = function(err, data) {
-    console.log('got data', data);
+    console.log('got data');
+    console.log(data.toString('hex'))
+    console.log('\n')
     // map left & right d-pad to rumble, and right action buttons to LEDs
     // setRumbleLed(hid, data[15], data[17], data[3] >> 3);
     this.read(this.gotData.bind(this));
